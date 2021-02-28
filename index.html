@@ -58,7 +58,7 @@
             });
             let hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
             $('#dtnow').html(dtnow);
-            if (hmnow >= "2200") {
+            if ( (hmnow >= "1600" && hmnow <= "1630") || (hmnow >= "2200" && hmnow <= "2230") ) {
                 window.location.replace("https://flaskpyone.herokuapp.com/scraper/forexr_list/bot");
             }
         });
