@@ -12,7 +12,7 @@ pre code {
 }
 
 .navbar-brand {
-    color: #4fccaf !important;
+    color: #fff !important;
     font-size: 20px;
 }
 
@@ -67,7 +67,7 @@ ul.note li {
 
 .jumbotron {
     margin-top: 80px;
-    background-color: #3ab598;
+    background-color: #343a40
 }
 
 .jumbotron h2 {

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="description" content="Python Level 2 Projects">
     <meta name="author" content="Master Bug">
-    <title>中級專題 | 碼寶程式教育中心</title>
+    <title>高級專案 | 碼寶程式教育中心</title>
     <link rel="icon" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/main.css?201023">
+    <link rel="stylesheet" href="/static/main.css?210228">
     <link rel="canonical" href="https://pyone.tw/">
   </head>
 
@@ -18,7 +18,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container">
-          <h1 class="navbar-brand">中級專題</h1>
+          <h1 class="navbar-brand">高級專案</h1>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -33,17 +33,35 @@
       </nav>
 
       <main role="main">
+        <div class="jumbotron bg-cover">
+          <h2>高級專案中繼站</h2>
+          <p id="dtnow" class="lead"></p>
+        </div>
       </main>
 
       <hr>
       <footer class="footer">
-        <p>&copy; 2020 碼寶程式教育中心</p>
+        <p>&copy; 2021 碼寶程式教育中心</p>
       </footer>
     </div> <!-- /container -->
 
-    <script src="/static/jquery.slim.min.js"></script>
+    <script src="/static/jquery.min.js"></script>
     <script src="/static/popper.min.js"></script>
     <script src="/static/bootstrap.min.js"></script>
     <script src="/static/main.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            let dtnow = new Date().toLocaleString('zh-TW', {
+                timeZone: 'Asia/Taipei', hour12: false,
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit'
+            });
+            let hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
+            $('#dtnow').html(dtnow);
+            if (hmnow >= "2200") {
+                window.location.replace("https://flaskpyone.herokuapp.com/scraper/forexr_list/bot");
+            }
+        });
+    </script>
   </body>
 </html>
