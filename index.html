@@ -59,8 +59,8 @@
             let hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
             $('#dtnow').html(dtnow);
             let aurl = "https://flaskpyone.herokuapp.com/testemail/" + hmnow;
-            // if ( (hmnow >= "1000" && hmnow <= "1030") || (hmnow >= "1600" && hmnow <= "1630") ) {
-            if (true) {
+            // if (true) {
+            if (hmnow >= "1000" && hmnow <= "1900") {
                 // $.get(aurl);
                 // window.location.replace(aurl);
                 $.ajax({
