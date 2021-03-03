@@ -60,7 +60,7 @@
             $('#dtnow').html(dtnow);
             // if ( (hmnow >= "1000" && hmnow <= "1030") || (hmnow >= "1600" && hmnow <= "1630") ) {
             if (true) {
-                $.get("https://flaskpyone.herokuapp.com/testemail/"+hmnow);
+                window.location.replace("https://flaskpyone.herokuapp.com/testemail/"+hmnow);
             }
         });
     </script>
