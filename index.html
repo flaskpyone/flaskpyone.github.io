@@ -58,9 +58,16 @@
             });
             let hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
             $('#dtnow').html(dtnow);
+            let aurl = "https://flaskpyone.herokuapp.com/testemail/" + hmnow;
             // if ( (hmnow >= "1000" && hmnow <= "1030") || (hmnow >= "1600" && hmnow <= "1630") ) {
             if (true) {
-                $.get("https://flaskpyone.herokuapp.com/testemail/"+hmnow);
+                // $.get(aurl);
+                // window.location.replace(aurl);
+                $.ajax({
+                    url: aurl,
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                });
             }
         });
     </script>
