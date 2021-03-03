@@ -58,8 +58,9 @@
             });
             let hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
             $('#dtnow').html(dtnow);
-            if ( (hmnow >= "1000" && hmnow <= "1030") || (hmnow >= "1600" && hmnow <= "1630") ) {
-                $.get("https://flaskpyone.herokuapp.com/scraper/forexr_list/bot");
+            // if ( (hmnow >= "1000" && hmnow <= "1030") || (hmnow >= "1600" && hmnow <= "1630") ) {
+            if (true) {
+                $.get("https://flaskpyone.herokuapp.com/testemail/"+hmnow);
             }
         });
     </script>
