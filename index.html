@@ -46,8 +46,7 @@
     </div>
 
     <script src="/static/jquery.min.js"></script>
-    <script src="/static/popper.min.js"></script>
-    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/bootstrap.bundle.min.js"></script>
     <script src="/static/main.js"></script>
     <script type="text/javascript">
         $(function(){
@@ -59,7 +58,7 @@
             var hmnow = dtnow.substring(11,13)+dtnow.substring(14,16);
             $('#dtnow').html(dtnow);
             var aurl = "https://flaskpyone.herokuapp.com/testemail";
-            if (hmnow >= "0800" && hmnow <= "2300") {
+            if (false) {
                 // window.location.replace(aurl);
                 $.ajax({url: aurl, dataType: 'jsonp', crossDomain: true, });
             }
